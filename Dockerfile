@@ -12,7 +12,7 @@ COPY . app.py /app/
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 #RUN pip install --upgrade pip &&\
-RUN pip install --no-cache-dir pip &&\
+RUN pip install --no-cache-dir pip==22.2.2 &&\
     pip install --no-cache-dir --trusted-host pypi.python.org -r requirements.txt
 
 ## Complete Step 4:
